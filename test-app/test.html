@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyakorlati teszt útmutató</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --text: #1f2937;
+        --muted: #4b5563;
+        --accent: #2563eb;
+        --border: #dbe3f0;
+        --success: #166534;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 24px;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      .subtitle {
+        margin-top: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .chapter {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px 26px;
+        margin-top: 24px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+
+      .chapter h2 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+        color: var(--accent);
+      }
+
+      .meta {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #eff6ff;
+        color: #1d4ed8;
+        font-size: 0.85rem;
+        font-weight: 700;
+      }
+
+      ul {
+        margin: 10px 0 0 20px;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .result {
+        margin-top: 16px;
+        padding: 10px 12px;
+        background: #f0fdf4;
+        border-left: 4px solid var(--success);
+        color: var(--success);
+        font-weight: 600;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gyakorlati teszt útmutató</h1>
+
+      <section class="chapter">
+        <h2>init</h2>
+        <p>Rövid utasítás: ellenőrizd, hogy az app elindul és betöltődik.</p>
+        <ul>
+          <li>Futtasd az <strong>npm install</strong> parancsot.</li>
+          <li>
+            Indítsd el az appet az <strong>npm run dev</strong> paranccsal.
+          </li>
+          <li>Nyisd meg a Vite oldalt.</li>
+        </ul>
+        <div class="result">
+          Várt eredmény: az alkalmazás a böngészőben sikeresen elindul, startup
+          hiba nélkül.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>App component</h2>
+        <p>
+          Rövid utasítás: ellenőrizd, hogy az <strong>App</strong> komponens
+          megjelenik.
+        </p>
+        <ul>
+          <li>Nézd meg az <strong>App</strong> fájlt.</li>
+          <li>Győződj meg róla, hogy megjelenik az oldal.</li>
+        </ul>
+        <div class="result">
+          Várt eredmény: az alkalmazás az App komponensen keresztül
+          renderelődik, és megjelenik a képernyőn.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>add component with property</h2>
+        <p>Rövid utasítás: teszteld a <strong>Box</strong> komponenst.</p>
+        <ul>
+          <li>Nyisd meg a Box komponenst.</li>
+          <li>Ellenőrizd, hogy a szöveg látszik.</li>
+        </ul>
+        <div class="result">
+          Várt eredmény: minden Box példány helyesen megjeleníti a szövegét.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>useState message</h2>
+        <p>Rövid utasítás: ellenőrizd a <strong>message</strong> állapotot.</p>
+        <ul>
+          <li>Importáld a <strong>useState</strong> hooket.</li>
+          <li>Jelenítsd meg az üzenetet.</li>
+        </ul>
+        <div class="result">
+          Várt eredmény: az oldal megjelenít egy kezdeti üzenetet, amely az
+          alkalmazás állapotában tárolódik.
+        </div>
+      </section>
+
+      <section class="chapter">
+        <h2>click callback</h2>
+        <p>
+          Rövid utasítás: kattints a gombra és ellenőrizd az üzenetváltozást.
+        </p>
+        <ul>
+          <li>Kattints egy Box gombra.</li>
+          <li>Ellenőrizd, hogy <strong>Clicked!</strong> jelenik meg.</li>
+        </ul>
+        <div class="result">
+          Várt eredmény: a gomb kattintása aktiválja a callbacket, és frissíti a
+          megjelenített állapotüzenetet.
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
